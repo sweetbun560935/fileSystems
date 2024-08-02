@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Championship Constructor</title>
+  <link rel="stylesheet" href="styles/main.css">
+  <script src="app.js" type="module"></script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nabla&display=swap" rel="stylesheet">
+
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+  <link rel="manifest" href="favicon/site.webmanifest">
+</head>
+
+<body>
+
+  <header>
+    <h1>Championship Constructor</h1>
+  </header>
+
+  <main id="main-content">
+
+    <!-- HOME -->
+
+    <div id="home-view" class="home-view">
+
+      <section id="create-section" class="create">
+        <button id="create-button" class="create-button">
+          Create Championship
+          <div class="button-overlay"></div>
+        </button>
+      </section>
+
+      <aside id="history-section" class="history">
+        <h2>History</h2>
+        <ul id="history-list">
+        </ul>
+        <div class="history-overlay"></div>
+      </aside>
+
+    </div>
+
+
+    <!-- CREATE -->
+
+    <div id="create-view" class="create-view hidden">
+
+      <section id="create-form-section" class="create-form">
+
+        <form action="" id="create-form">
+          <section>
+            <fieldset>
+              <legend>Championship type</legend>
+              <ul>
+                <li>
+                  <label for="ch-type-tournament">Tournament</label>
+                  <input type="radio" name="ch-type" id="ch-type-tournament" value="tournament" checked>
+                </li>
+                <li>
+                  <label for="ch-type-league">League</label>
+                  <input type="radio" name="ch-type" id="ch-type-league" value="league">
+                </li>
+              </ul>
+            </fieldset>
+
+            <p>
+              <label for="ch-name">Championship name</label>
+              <input id="ch-name" type="text" name="ch-name">
+            </p>
+          </section>
+
+          <section>
+            <ul id="player-input-list">
+              <li>
+                <input type="text" name="player" value="">
+                <button class="remove-button" type="button">x</button>
+              </li>
+            </ul>
+            <button id="add-player-button" type="button">Add Player</button>
+          </section>
+
+          <section>
+            <button id="create-submit-button" type="submit">Generate Championship</button>
+          </section>
+
+        </form>
+
+        <button id="back-button">Go Back</button>
+      </section>
+
+    </div>
+
+
+    <!-- CHAMPIONSHIP -->
+
+    <div id="championship-view" class="championship-view hidden">
+      <section class="tournament-bracket">
+        GENERERAD TURNERING
+      </section>
+
+      <section class="league-table">
+        GENERERAD TABELL
+      </section>
+
+      <section class="league-matches">
+        GENERERAT MATCHSCHEMA
+      </section>
+
+      <section class="controls">
+        <button id="change-settings-button">Change Settings</button>
+        <button id="pause-button">Pause Championship</button>
+      </section>
+
+      <pre id="temp-championship-info"></pre>
+    </div>
+
+
+
+
+    <!-- MATCH POPUP
+
+    <div class="match-popup">
+      <button class="exit">X</button>
+      <h2>Match</h2>
+      <div class="contestants">
+        <div class="contestant-left">
+          <h3>Name 1</h3>
+          POÄNG FÄLT
+        </div>
+        <p class="vs">VS</p>
+        <div class="contestant-right">
+          <h3>Name 2</h3>
+          POÄNG FÄLT
+        </div>
+      </div>
+      <button>Confirm</button>
+    </div>
+
+    -->
+
+  </main>
+
+</body>
+
+</html>
